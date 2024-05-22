@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#111;
+}
+.container i
+{
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+.container i:nth-child(1)
+{
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    animation: animate 6s linear infinite;
+}
+.container i:nth-child(2)
+{
+    border-radius: 75% 25% 20% 80% / 36% 50% 50% 64% ;
+    animation: animate2 10s reverse infinite;
+}
+.container i:nth-child(3)
+{
+    border-radius: 63% 37% 49% 51% / 51% 47% 53% 49% ;
+    animation: animate 
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100% 
+    {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2
+{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100% 
+    {
+        transform: rotate(0deg);
+    }
+}
+.container:hover i
+{
+   border: 6px solid var(--clr); 
+   filter: drop-shadow(0 0 20px var(--clr));
+}
+.container
+{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .login
+{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .login h2
+{
+    font-size: 2em;
+    color: #fff;
+}
+.container .login .inputbox
+{
+    position: relative;
+    width: 100%;
+}
+.container .login .inputbox input
+{
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+.container .login .inputbox input::placeholder
+{
+    color: rgba(255,255,255,0.75);
+}
+.container .login .inputbox input[type="submit"]
+{
+    background: linear-gradient(45deg,#ff357a,#fff172);
+    border: none;
+    cursor: pointer;
+}
+.container .login .links 
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.container .login .links a
+{
+    color:#fff;
+    text-decoration: none;
+}
